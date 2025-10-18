@@ -44,7 +44,7 @@ export default function Page() {
       defaultTextAnimation="reveal-blur"
       borderRadius="pill"
     >
-      <div id="nav" data-section="nav">
+      <div id="nav" data-section="nav" className="scroll-mt-24">
         <NavbarLayoutFloatingInline
           navItems={[
             { name: "Home", id: "home" },
@@ -55,12 +55,13 @@ export default function Page() {
           brandName="SaaS App"
         />
       </div>
-      <div id="hero" data-section="hero" className={"scroll-mt-24 "}>
-        <div className={"mx-auto px-4 md:px-6 "}>
+      <div id="hero" data-section="hero" className="scroll-mt-24 ">
+        <div className="mx-auto px-4 md:px-6 ">
           <HeroBillboard
             title="Welcome to Our SaaS Platform"
             description="Create impactful digital experiences with our innovative solutions"
             imageSrc={resolveAsset('hero-image')}
+            imageAlt={resolveAlt('hero-image')}
             buttons={[
               { text: "Get Started", href: "https://example.com" },
               { text: "Learn More", href: "about" }
@@ -68,15 +69,15 @@ export default function Page() {
           />
         </div>
       </div>
-      <div id="about" data-section="about" className={"scroll-mt-24 "}>
-        <div className={"mx-auto px-4 md:px-6 "}>
+      <div id="about" data-section="about" className="scroll-mt-24 ">
+        <div className="mx-auto px-4 md:px-6 ">
           <TextAbout
             title="We build tools that empower businesses to reach their full potential"
           />
         </div>
       </div>
-      <div id="feature" data-section="feature" className={"scroll-mt-24 "}>
-        <div className={"mx-auto px-4 md:px-6 "}>
+      <div id="feature" data-section="feature" className="scroll-mt-24 ">
+        <div className="mx-auto px-4 md:px-6 ">
           <FeatureCardOne
             title="Powerful Features"
             description="Explore the capabilities that set us apart"
@@ -84,43 +85,39 @@ export default function Page() {
               {
                 title: "Advanced Analytics",
                 description: "Gain deep insights into your data with our intuitive analytics tools",
-                imageSrc: resolveAsset('features-image-1')
+                imageSrc: resolveAsset('features-image-1'),
+                imageAlt: resolveAlt('features-image-1')
               },
               {
                 title: "Cloud Integration",
                 description: "Seamlessly connect and leverage cloud services",
-                imageSrc: resolveAsset('features-image-2')
+                imageSrc: resolveAsset('features-image-2'),
+                imageAlt: resolveAlt('features-image-2')
               },
               {
                 title: "Custom Reporting",
                 description: "Generate reports tailored to your business needs",
-                imageSrc: resolveAsset('features-image-3')
+                imageSrc: resolveAsset('features-image-3'),
+                imageAlt: resolveAlt('features-image-3')
               }
             ]}
           />
         </div>
       </div>
-      <div id="socialProof" data-section="socialProof" className={"scroll-mt-24 "}>
-        <div className={"mx-auto px-4 md:px-6 "}>
+      <div id="socialProof" data-section="socialProof" className="scroll-mt-24 ">
+        <div className="mx-auto px-4 md:px-6 ">
           <SocialProofOne
             title="Trusted by Leading Companies"
             description="Our clients include some of the most respected names in the industry"
-            logos={[
-              resolveAsset('logo-company1'),
-              resolveAsset('logo-company2'),
-              resolveAsset('logo-company3'),
-              resolveAsset('logo-company4'),
-              resolveAsset('logo-company5'),
-              resolveAsset('logo-company6'),
-              resolveAsset('logo-company7')
-            ]}
+            logos={[resolveAsset('logo-company1'), resolveAsset('logo-company2'), resolveAsset('logo-company3'), resolveAsset('logo-company4'), resolveAsset('logo-company5'), resolveAsset('logo-company6'), resolveAsset('logo-company7')]}
           />
         </div>
       </div>
-      <div id="testimonial" data-section="testimonial" className={"scroll-mt-24 "}>
-        <div className={"mx-auto px-4 md:px-6 "}>
+      <div id="testimonial" data-section="testimonial" className="scroll-mt-24 ">
+        <div className="mx-auto px-4 md:px-6 ">
           <TestimonialCardOne
             title="What Our Users Say"
+            description="Here's what some of our users have to say about us."
             testimonials={[
               {
                 id: "1",
@@ -128,7 +125,8 @@ export default function Page() {
                 role: "CEO",
                 company: "TechCorp",
                 rating: 5,
-                imageSrc: resolveAsset('testimonial-1')
+                imageSrc: resolveAsset('testimonial-1'),
+                imageAlt: resolveAlt('testimonial-1')
               },
               {
                 id: "2",
@@ -136,7 +134,8 @@ export default function Page() {
                 role: "CTO",
                 company: "InnovateLab",
                 rating: 5,
-                imageSrc: resolveAsset('testimonial-2')
+                imageSrc: resolveAsset('testimonial-2'),
+                imageAlt: resolveAlt('testimonial-2')
               },
               {
                 id: "3",
@@ -144,7 +143,8 @@ export default function Page() {
                 role: "Marketing Director",
                 company: "GrowthCo",
                 rating: 5,
-                imageSrc: resolveAsset('testimonial-3')
+                imageSrc: resolveAsset('testimonial-3'),
+                imageAlt: resolveAlt('testimonial-3')
               },
               {
                 id: "4",
@@ -152,25 +152,27 @@ export default function Page() {
                 role: "Product Manager",
                 company: "StartupXYZ",
                 rating: 5,
-                imageSrc: resolveAsset('testimonial-4')
+                imageSrc: resolveAsset('testimonial-4'),
+                imageAlt: resolveAlt('testimonial-4')
               }
             ]}
           />
         </div>
       </div>
-      <div id="contact" data-section="contact" className={"scroll-mt-24 "}>
-        <div className={"mx-auto px-4 md:px-6 "}>
+      <div id="contact" data-section="contact" className="scroll-mt-24 ">
+        <div className="mx-auto px-4 md:px-6 ">
           <ContactSplit
             tag="Stay Updated"
             title="Subscribe to Our Newsletter"
             description="Join our mailing list for insights and updates."
             imageSrc={resolveAsset('hero-image')}
+            imageAlt={resolveAlt('hero-image')}
             onSubmit={(email) => console.log(email)}
           />
         </div>
       </div>
-      <div id="footer" data-section="footer" className={"scroll-mt-24 "}>
-        <div className={"mx-auto px-4 md:px-6 "}>
+      <div id="footer" data-section="footer" className="scroll-mt-24 ">
+        <div className="mx-auto px-4 md:px-6 ">
           <FooterBaseReveal
             columns={[
               {
